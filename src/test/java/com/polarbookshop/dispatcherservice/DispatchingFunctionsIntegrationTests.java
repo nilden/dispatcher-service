@@ -2,6 +2,7 @@ package com.polarbookshop.dispatcherservice;
 
 import java.util.function.Function;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
@@ -10,6 +11,7 @@ import org.springframework.cloud.function.context.FunctionCatalog;
 import org.springframework.cloud.function.context.test.FunctionalSpringBootTest;
 
 @FunctionalSpringBootTest
+@Disabled("These tests are only necessary when using the functions alone (no bindings)")
 class DispatchingFunctionsIntegrationTests {
 
     @Autowired
