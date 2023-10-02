@@ -22,10 +22,10 @@ spring:
     stream:
       bindings:
         packlabel-in-0:
-          destination: order-accepted
-          group: ${spring.application.name}
+          destination: order-accepted # The actual name at the broker that the binder binds to (the exchange in RabbitMQ)
+          group: ${spring.application.name} # The consumer group interested in the destination (same as the application name)
         packlabel-out-0:
-          destination: order-dispatched
+          destination: order-dispatched # The actual name at the broker that the binder binds to (the exchange in RabbitMQ)
   rabbitmq:
     host: localhost
     port: 5672
